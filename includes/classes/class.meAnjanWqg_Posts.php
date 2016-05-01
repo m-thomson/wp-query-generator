@@ -303,7 +303,7 @@
 
             global $wpdb;
 
-            $sql = "select distinct pm.meta_key from wp_postmeta pm order by pm.meta_key";
+            $sql = "select distinct pm.meta_key from {$wpdb->postmeta} pm order by pm.meta_key";
 
             return $wpdb->get_col($sql,0);
 
